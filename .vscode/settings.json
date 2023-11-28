@@ -4,7 +4,7 @@
 		"**/bower_components": true,
 		"**/.sfdx": true
 	},
-	"apexPMD.rulesets": ["pmd/ruleset.xml"],
+	"apexPMD.rulesets": ["config/pmd/ruleset.xml"],
 	"files.associations": {
 		"*.svg": "html",
 		"*.xml": "html"
