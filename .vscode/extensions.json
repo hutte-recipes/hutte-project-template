@@ -1,9 +1,12 @@
 {
-  "recommendations": [
-    "salesforce.salesforcedx-vscode",
-    "redhat.vscode-xml",
-    "dbaeumer.vscode-eslint",
-    "esbenp.prettier-vscode",
-    "financialforce.lana"
-  ]
+	"recommendations": [
+		"salesforce.salesforcedx-vscode",
+		"redhat.vscode-xml",
+		"dbaeumer.vscode-eslint",
+		"esbenp.prettier-vscode",
+		"financialforce.lana",
+		"mhutchie.git-graph",
+		"eamodio.gitlens",
+		"DavidAnson.vscode-markdownlint"
+	]
 }
