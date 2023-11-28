@@ -1,4 +1,4 @@
-This repository contains 
+# This repository contains
 
 - a skeleton SF project created with  ```sf project generate```
 - a custom Salesforce theme
@@ -6,4 +6,3 @@ This repository contains
 - a sample data set to demonstrate data import via Hutte custom button
 
 Please check https://docs.hutte.io in order to learn more about setting up and using Hutte.
-

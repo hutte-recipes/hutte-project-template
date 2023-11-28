@@ -1,10 +1,8 @@
 [
-    {
-        "sobject": "Account",
-        "saveRefs": true,
-        "resolveRefs": false,
-        "files": [
-        "export-Account-Contact.json"
-        ]
-    }
+	{
+		"sobject": "Account",
+		"saveRefs": true,
+		"resolveRefs": false,
+		"files": ["export-Account-Contact.json"]
+	}
 ]
