@@ -16,7 +16,7 @@ jobs:
                   sf plugins:install @salesforce/sfdx-scanner
             - name: SF Code Analyzer - PMD
               run: |
-                  sf scanner:run --engine pmd --target force-app --pmdconfig=pmd/ruleset.xml --format table --severity-threshold 3
+                  sf scanner:run --engine pmd --target force-app --pmdconfig=config/pmd/ruleset.xml --format table --severity-threshold 3
 
     RetireJS:
         runs-on: ubuntu-latest
