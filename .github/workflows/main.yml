@@ -1,0 +1,16 @@
+name: Main
+
+on:
+    push:
+        branches:
+            - main
+
+jobs:
+    incremental-deploy:
+        name: Run Incremental Deploy Workflow
+        uses: ./.github/workflows/incremental-deploy.yml
+        secrets: inherit
+        with:
+            # Note: This requires the merged PR to only have a single commit or merge commit
+            baseRef: 'HEAD~1'
+            targetRef: 'HEAD'
