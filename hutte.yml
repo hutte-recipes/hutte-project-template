@@ -10,8 +10,12 @@ custom_scripts:
     scratch_org:
         'Import seed data':
             description: Import seed data into your Scratch Org
-            run: sf data tree import -p ./data/sample-plan.json
+            run: |
+                echo y | sf plugins install sfdmu
+                sf sfdmu run -p config/data -s csvfile -u "${SALESFORCE_USERNAME}" --filelog 0 -n
     sandbox:
         'Import seed data':
             description: Import seed data into your Sandbox
-            run: sf data tree import -p ./data/sample-plan.json
+            run: |
+                echo y | sf plugins install sfdmu
+                sf sfdmu run -p config/data -s csvfile -u "${SALESFORCE_USERNAME}" --filelog 0 -n
