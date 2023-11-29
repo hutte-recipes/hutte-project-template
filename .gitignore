@@ -43,3 +43,8 @@ $RECYCLE.BIN/
 **/__pycache__/
 **/.venv/
 **/venv/
+
+# SFDMU
+/data/source/
+/data/target/
+/data/logs/
