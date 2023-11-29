@@ -10,7 +10,7 @@ jobs:
         secrets: inherit
 
     incremental-deploy:
-        name: Run Incremental Deploy Workflow
+        name: Validate deployment delta changes
         uses: ./.github/workflows/incremental-deploy.yml
         secrets: inherit
         with:
