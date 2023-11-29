@@ -6,6 +6,11 @@ on:
             - main
 
 jobs:
+    code-analyze:
+        name: Run Salesforce Code Analyzer
+        uses: ./.github/workflows/code-analyze.yml
+        secrets: inherit
+
     incremental-deploy:
         name: Run Incremental Deploy Workflow
         uses: ./.github/workflows/incremental-deploy.yml

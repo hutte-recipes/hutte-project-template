@@ -1,0 +1,58 @@
+name: Salesforce Code Quality
+
+on:
+    workflow_dispatch:
+    workflow_call:
+
+jobs:
+    PMD:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v4
+            - uses: actions/setup-node@v3
+            - name: Setup Salesforce CLI
+              run: |
+                  npm install --global @salesforce/cli
+                  sf plugins:install @salesforce/sfdx-scanner
+            - name: SF Code Analyzer - PMD
+              run: |
+                  sf scanner:run --engine pmd --target force-app --pmdconfig=pmd/ruleset.xml --format table --severity-threshold 3
+
+    RetireJS:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v4
+            - uses: actions/setup-node@v3
+            - name: Setup Salesforce CLI
+              run: |
+                  npm install --global @salesforce/cli
+                  sf plugins:install @salesforce/sfdx-scanner
+            - name: SF Code Analyzer - RetireJS
+              run: |
+                  sf scanner:run --engine "retire-js" --target force-app --format table --severity-threshold 3
+
+    GraphEngine:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v4
+            - uses: actions/setup-node@v3
+            - name: Setup Salesforce CLI
+              run: |
+                  npm install --global @salesforce/cli
+                  sf plugins:install @salesforce/sfdx-scanner
+            - name: SF Code Analyzer - Data Flow Analysis
+              run: |
+                  sf scanner:run:dfa --target force-app --projectdir force-app --format table --severity-threshold 3
+
+    ESLint:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v4
+            - uses: actions/setup-node@v3
+            - name: Setup Salesforce CLI
+              run: |
+                  npm install --global @salesforce/cli
+                  sf plugins:install @salesforce/sfdx-scanner
+            - name: SF Code Analyzer - ESLint
+              run: |
+                  sf scanner:run --engine eslint --eslintconfig=.eslintrc.json --target "force-app/**/*.js" --format table --severity-threshold 3
