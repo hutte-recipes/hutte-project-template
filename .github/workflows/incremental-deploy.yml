@@ -35,7 +35,7 @@ jobs:
                   fetch-depth: 0
             - name: Install Salesforce CLI
               run: |
-                  npm install --global @salesforce/cli
+                  yarn global add @salesforce/cli
                   sf version
             - name: Generate delta
               run: |
