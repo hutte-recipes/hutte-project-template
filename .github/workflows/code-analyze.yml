@@ -55,7 +55,7 @@ jobs:
                   sf plugins:install @salesforce/sfdx-scanner
             - name: Install deps
               run: |
-                  npm install
+                  yarn install
             - name: SF Code Analyzer - ESLint
               run: |
                   sf scanner:run --engine eslint --eslintconfig=.eslintrc.json --target "force-app/**/*.js" --format table --severity-threshold 3
