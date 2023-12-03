@@ -23,6 +23,7 @@ Created with  ```sf project generate```, with
 
 - Prettier baseline configuration
 - PMD baseline configuration
+- ESLint baseline configuration
 - Precommit Husky hook configured with prettier formating
 
 Please check https://docs.hutte.io in order to learn more about setting up and using Hutte.
