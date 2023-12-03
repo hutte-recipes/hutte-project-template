@@ -44,7 +44,7 @@ jobs:
                     git merge "${{ inputs.baseRef }}"
                   fi
                   mkdir -p deltas
-                  sf sgd source delta --from "${{ inputs.baseRef }}" --to "${{ inputs.targetRef }}" --output deltas --generate-delta --ignore .forceignore post-deploy/
+                  sf sgd source delta --from "${{ inputs.baseRef }}" --to "${{ inputs.targetRef }}" --output deltas --generate-delta --ignore .forceignore --ignore post-deploy/
                   echo "# package.xml"
                   cat deltas/package/package.xml; echo ""
                   echo "# destructiveChanges.xml"
