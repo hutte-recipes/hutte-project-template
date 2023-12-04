@@ -1,7 +1,7 @@
 {
 	"singleQuote": true,
 	"printWidth": 120,
-	"tabWidth": 4,
+	"tabWidth": 2,
 	"requireConfig": false,
 	"useTabs": true,
 	"trailingComma": "none",
