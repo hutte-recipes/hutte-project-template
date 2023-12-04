@@ -1,25 +1,23 @@
 {
-	"search.exclude": {
-		"**/node_modules": true,
-		"**/bower_components": true,
-		"**/.sfdx": true
-	},
-	"apexPMD.rulesets": ["config/pmd/ruleset.xml"],
-	"files.associations": {
-		"*.svg": "html",
-		"*.xml": "html"
-	},
-	"editor.formatOnSave": true,
-	"editor.defaultFormatter": "esbenp.prettier-vscode",
-	"editor.insertSpaces": false,
-	"editor.detectIndentation": false,
-	"editor.tabSize": 2,
-	"editor.renderWhitespace": "all",
-	"prettier.enable": true,
-	"prettier.tabWidth": 2,
-	"prettier.useTabs": true,
-	"prettier.printWidth": 120,
-	"prettier.singleQuote": true,
-	"prettier.semi": true,
-	"prettier.trailingComma": "none"
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/bower_components": true,
+    "**/.sfdx": true
+  },
+  "apexPMD.rulesets": ["config/pmd/ruleset.xml"],
+  "files.associations": {
+    "*.svg": "html",
+    "*.xml": "html"
+  },
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.insertSpaces": true,
+  "editor.detectIndentation": false,
+  "editor.renderWhitespace": "all",
+  "prettier.enable": true,
+  "prettier.useTabs": false,
+  "prettier.printWidth": 120,
+  "prettier.singleQuote": true,
+  "prettier.semi": true,
+  "prettier.trailingComma": "none"
 }

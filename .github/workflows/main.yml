@@ -1,21 +1,21 @@
 name: Main
 
 on:
-    push:
-        branches:
-            - main
+  push:
+    branches:
+      - main
 
 jobs:
-    code-analyze:
-        name: Run Salesforce Code Analyzer
-        uses: ./.github/workflows/code-analyze.yml
-        secrets: inherit
+  code-analyze:
+    name: Run Salesforce Code Analyzer
+    uses: ./.github/workflows/code-analyze.yml
+    secrets: inherit
 
-    incremental-deploy:
-        name: Deploy delta changes
-        uses: ./.github/workflows/incremental-deploy.yml
-        secrets: inherit
-        with:
-            # Note: This requires the merged PR to only have a single commit or merge commit
-            baseRef: 'HEAD~1'
-            targetRef: 'HEAD'
+  incremental-deploy:
+    name: Deploy delta changes
+    uses: ./.github/workflows/incremental-deploy.yml
+    secrets: inherit
+    with:
+      # Note: This requires the merged PR to only have a single commit or merge commit
+      baseRef: 'HEAD~1'
+      targetRef: 'HEAD'
