@@ -3,8 +3,8 @@ version: 1.0
 # Shell script to run when pushing the source code to the scratch orgs.
 # It's a great place to automate tasks like permission set assignments or data loading.
 push_script: |
-  sf source push -f --loglevel debug -w 30
-  sf source deploy -p post-deploy -w 15
+  sf project deploy start --wait 60 --ignore-conflicts
+  sf project deploy start --wait 15 --ignore-conflicts --source-dir post-deploy
 custom_scripts:
   # This scripts will be displayed on the scratch org's page
   scratch_org:
