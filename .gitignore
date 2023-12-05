@@ -48,3 +48,6 @@ $RECYCLE.BIN/
 /data/source/
 /data/target/
 /data/logs/
+
+# SGD
+deltas*
