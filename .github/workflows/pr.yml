@@ -1,19 +1,19 @@
 name: Pull Request
 
 on:
-  pull_request:
+    pull_request:
 
 jobs:
-  code-analyze:
-    name: Run Salesforce Code Analyzer
-    uses: ./.github/workflows/code-analyze.yml
-    secrets: inherit
+    code-analyze:
+        name: Run Salesforce Code Analyzer
+        uses: ./.github/workflows/code-analyze.yml
+        secrets: inherit
 
-  incremental-deploy:
-    name: Validate deployment delta changes
-    uses: ./.github/workflows/incremental-deploy.yml
-    secrets: inherit
-    with:
-      baseRef: 'origin/${GITHUB_BASE_REF}'
-      targetRef: 'HEAD'
-      validateOnly: true
+    incremental-deploy:
+        name: Validate deployment delta changes
+        uses: ./.github/workflows/incremental-deploy.yml
+        secrets: inherit
+        with:
+            baseRef: 'origin/${GITHUB_BASE_REF}'
+            targetRef: 'HEAD'
+            validateOnly: true
