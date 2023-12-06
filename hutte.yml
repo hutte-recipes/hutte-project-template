@@ -3,15 +3,19 @@ version: 1.0
 # Shell script to run when pushing the source code to the scratch orgs.
 # It's a great place to automate tasks like permission set assignments or data loading.
 push_script: |
-  sf source push -f --loglevel debug -w 30
-  sf source deploy -p post-deploy -w 15
+    sf project deploy start --wait 60 --ignore-conflicts
+    sf project deploy start --wait 15 --ignore-conflicts --source-dir post-deploy
 custom_scripts:
-  # This scripts will be displayed on the scratch org's page
-  scratch_org:
-    'Import seed data':
-      description: Import seed data into your Scratch Org
-      run: sf data tree import -p ./data/sample-plan.json
-  sandbox:
-    'Import seed data':
-      description: Import seed data into your Sandbox
-      run: sf data tree import -p ./data/sample-plan.json
+    # This scripts will be displayed on the scratch org's page
+    scratch_org:
+        'Import seed data':
+            description: Import seed data into your Scratch Org
+            run: |
+                echo y | sf plugins install sfdmu
+                sf sfdmu run -p config/data -s csvfile -u "${SALESFORCE_USERNAME}" --filelog 0 -n
+    sandbox:
+        'Import seed data':
+            description: Import seed data into your Sandbox
+            run: |
+                echo y | sf plugins install sfdmu
+                sf sfdmu run -p config/data -s csvfile -u "${SALESFORCE_USERNAME}" --filelog 0 -n

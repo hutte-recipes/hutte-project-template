@@ -1,7 +1,24 @@
 {
-  "search.exclude": {
-    "**/node_modules": true,
-    "**/bower_components": true,
-    "**/.sfdx": true
-  }
+    "search.exclude": {
+        "**/node_modules": true,
+        "**/bower_components": true,
+        "**/.sfdx": true
+    },
+    "apexPMD.rulesets": ["config/pmd/ruleset.xml"],
+    "[xml]": {
+        "editor.defaultFormatter": "redhat.vscode-xml"
+    },
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.insertSpaces": true,
+    "editor.detectIndentation": false,
+    "editor.renderWhitespace": "all",
+    "editor.tabSize": 4,
+    "prettier.tabWidth": 4,
+    "prettier.enable": true,
+    "prettier.useTabs": false,
+    "prettier.printWidth": 120,
+    "prettier.singleQuote": true,
+    "prettier.semi": true,
+    "prettier.trailingComma": "none"
 }

@@ -1,0 +1,65 @@
+# Based on https://github.com/mehdisfdc/sfdx-GitHub-actions/blob/main/.github/workflows/main.yml
+name: Incremental deployment
+
+on:
+    workflow_dispatch:
+        inputs:
+            validateOnly:
+                description: 'Perform a validation deployment only'
+            baseRef:
+                description: 'Git base ref'
+                required: true
+            targetRef:
+                description: 'Git target ref'
+                required: true
+    workflow_call:
+        inputs:
+            validateOnly:
+                description: 'Perform a validation deployment only'
+                type: boolean
+            baseRef:
+                description: 'Git base ref'
+                type: string
+                required: true
+            targetRef:
+                description: 'Git target ref'
+                type: string
+                required: true
+
+jobs:
+    default:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v4
+              with:
+                  fetch-depth: 0
+            - name: Install Salesforce CLI
+              run: |
+                  yarn global add @salesforce/cli
+                  sf version
+            - name: Generate delta
+              run: |
+                  echo y | sf plugins:install sfdx-git-delta
+                  if [ "${{ inputs.validateOnly }}" = "true" ]; then
+                    git merge "${{ inputs.baseRef }}"
+                  fi
+                  mkdir -p deltas
+                  sf sgd source delta --from "${{ inputs.baseRef }}" --to "${{ inputs.targetRef }}" --output deltas --generate-delta --ignore .forceignore
+                  echo "# package.xml"
+                  cat deltas/package/package.xml; echo ""
+                  echo "# destructiveChanges.xml"
+                  cat deltas/destructiveChanges/destructiveChanges.xml; echo ""
+            - name: Deploy changes to target org
+              run: |
+                  sf org login sfdx-url --set-default --sfdx-url-file <(echo "${{ secrets.SFDX_AUTH_URL_TARGET_ORG }}")
+                  deployFlags=(
+                    --manifest deltas/package/package.xml
+                    --post-destructive-changes deltas/destructiveChanges/destructiveChanges.xml
+                    --wait 30
+                    --test-level RunLocalTests
+                    --verbose
+                  )
+                  if [ "${{ inputs.validateOnly }}" = "true" ]; then
+                    deployFlags+=( --dry-run )
+                  fi
+                  sf project deploy start "${deployFlags[@]}"
