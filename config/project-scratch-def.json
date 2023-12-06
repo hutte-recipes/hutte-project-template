@@ -1,6 +1,7 @@
 {
-  "orgName": "harald company",
+  "orgName": "Hutte Recipes",
   "edition": "Developer",
+  "language": "en_US",
   "features": ["EnableSetPasswordInApi"],
   "settings": {
     "lightningExperienceSettings": {
