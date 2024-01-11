@@ -3,6 +3,14 @@
         {
             "path": "force-app",
             "default": true
+        },
+        {
+            "path": "hutte-frameworks-collection",
+            "package": "Hutte Frameworks Collection",
+            "versionNumber": "1.0.0.NEXT",
+            "definitionFile": "config/project-scratch-def.json",
+            "default": false,
+            "scopeProfiles": true
         }
     ],
     "name": "test",

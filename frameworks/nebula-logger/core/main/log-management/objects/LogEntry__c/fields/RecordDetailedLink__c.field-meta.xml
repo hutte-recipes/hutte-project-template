@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RecordDetailedLink__c</fullName>
+    <businessStatus>Active</businessStatus>
+    <complianceGroup>None</complianceGroup>
+    <externalId>false</externalId>
+    <formula>IF(
+    NOT(ISBLANK(RecordId__c)),
+    CASE(
+        TEXT(RecordSObjectClassification__c),
+        &apos;Custom Object&apos;, HYPERLINK(
+            &apos;/&apos; + RecordId__c,
+            TEXT(RecordSObjectType__c) + &apos;: &apos; + IF(
+                ISBLANK(RecordName__c),
+                RecordId__c,
+                RecordName__c
+            ),
+            &apos;_top&apos;
+        ),
+        &apos;Standard Object&apos;, HYPERLINK(
+            &apos;/&apos; + RecordId__c,
+            TEXT(RecordSObjectType__c) + &apos;: &apos; + IF(
+                ISBLANK(RecordName__c),
+                RecordId__c,
+                RecordName__c
+            ),
+            &apos;_top&apos;
+        ),
+        IF(
+            ISBLANK(RecordId__c),
+            null,
+            IF(
+                ISBLANK(RecordName__c) &amp;&amp; NOT(ISBLANK(RecordId__c)),
+                TEXT(RecordSObjectType__c) + &apos;: &apos; + RecordId__c,
+                TEXT(RecordSObjectType__c) + &apos;: &apos; + RecordName__c
+            )
+        )
+    ),
+    IF(
+        ISBLANK(TEXT(RecordCollectionType__c)),
+        &apos;&apos;,
+        IF(
+            TEXT(RecordCollectionType__c) = &apos;Map&apos;,
+            TEXT(RecordCollectionType__c) + &apos;&lt;Id, &apos; + TEXT(RecordSObjectType__c) + &apos;&gt;&apos;,
+            TEXT(RecordCollectionType__c) + &apos;&lt;&apos; + TEXT(RecordSObjectType__c) + &apos;&gt;&apos;
+        )
+    )
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Related Record</label>
+    <required>false</required>
+    <securityClassification>Confidential</securityClassification>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>
