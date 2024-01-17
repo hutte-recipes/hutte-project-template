@@ -1,14 +1,27 @@
 {
     "orgName": "Hutte Recipes",
-    "edition": "Developer",
+    "edition": "Enterprise",
+    "hasSampleData": true,
+    "country": "US",
     "language": "en_US",
-    "features": ["EnableSetPasswordInApi"],
+    "features": [],
     "settings": {
-        "lightningExperienceSettings": {
-            "enableS1DesktopEnabled": true
+        "chatterSettings": {
+            "enableChatter": false
         },
-        "mobileSettings": {
-            "enableS1EncryptedStoragePref2": false
+        "communitiesSettings": {
+            "enableNetworksEnabled": false
+        },
+        "pathAssistantSettings": {
+            "pathAssistantEnabled": false
+        },
+        "securitySettings": {
+            "enableAdminLoginAsAnyUser": false
+        },
+        "userManagementSettings": {
+            "enableEnhancedPermsetMgmt": true,
+            "enableEnhancedProfileMgmt": true,
+            "enableNewProfileUI": true
         }
     }
 }

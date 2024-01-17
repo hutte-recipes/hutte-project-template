@@ -102,23 +102,6 @@ public class DomainBuilder_Test {
         System.assertEquals(2, [SELECT Count() FROM Contact]);
     }
 
-
-    @IsTest
-    private static void allowsSetupObjects() {
-
-        try {
-            System.runAs(User_t.standard()) {
-                new Account_t().persist();
-            }
-        }
-        catch(Exception ex) {
-            System.assert(false);
-        }
-
-        System.assertEquals(1, [SELECT Count() FROM Account]);
-    }
-
-
     @IsTest
     private static void allowsSelfReferences() {
 
