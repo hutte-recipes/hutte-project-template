@@ -1,20 +1,25 @@
 {
-    "packageDirectories": [
-        {
-            "path": "force-app",
-            "default": true
-        },
-        {
-            "path": "hutte-frameworks-collection",
-            "package": "Hutte Frameworks Collection",
-            "versionNumber": "1.0.0.NEXT",
-            "definitionFile": "config/project-scratch-def.json",
-            "default": false,
-            "scopeProfiles": true
-        }
-    ],
-    "name": "test",
-    "namespace": "",
-    "sfdcLoginUrl": "https://login.salesforce.com",
-    "sourceApiVersion": "58.0"
+  "packageDirectories": [
+    {
+      "path": "force-app",
+      "default": true
+    },
+    {
+      "path": "frameworks",
+      "package": "Hutte Frameworks Collection",
+      "definitionFile": "config/project-scratch-def.json",
+      "versionName": "ver 1.0",
+      "versionNumber": "1.0.0.NEXT",
+      "default": false,
+      "versionDescription": "This package includes a Hutte-refined collection of Open Source packages for Salesforce Development"
+    }
+  ],
+  "name": "test",
+  "namespace": "",
+  "sfdcLoginUrl": "https://login.salesforce.com",
+  "sourceApiVersion": "58.0",
+  "packageAliases": {
+    "Hutte Frameworks Collection": "0HoS7000000004rKAA",
+    "Hutte Frameworks Collection@1.0.0-1": "04tS70000000IxpIAE"
+  }
 }
