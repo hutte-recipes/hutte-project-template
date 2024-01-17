@@ -13,7 +13,8 @@
         "prettier": "prettier --write \"**/*.{cls,cmp,component,css,html,js,json,md,page,trigger,xml,yaml,yml}\"",
         "prettier:verify": "prettier --list-different \"**/*.{cls,cmp,component,css,html,js,json,md,page,trigger,xml,yaml,yml}\"",
         "postinstall": "husky install",
-        "precommit": "lint-staged"
+        "precommit": "lint-staged",
+        "create:package:version": "sf package version create --package \"Hutte Frameworks Collection\"  --code-coverage --installation-key-bypass --wait 300"
     },
     "devDependencies": {
         "@lwc/eslint-plugin-lwc": "^1.1.2",
