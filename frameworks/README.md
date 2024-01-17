@@ -3,6 +3,7 @@
 ## What does it include?
 
 Hutte Apex Collection is a set of useful open source Apex frameworks for Salesforce development, built by contributors in the Salesforce community
+
 These are:
 
 - [Apex Trigger Actions](https://github.com/mitchspano/apex-trigger-actions-framework)
@@ -15,6 +16,10 @@ These are:
 ## Why to create a Collection?
 
 While these can be deployed (or even installed as an unlocked package) independently, Hutte provides these bundled in an Unlocked Package to set a project baseline in a single-installation. Besides, this Hutte collection can be extended with new open source frameworks (either by Hutte or external contribution) and new versions of this unlocked package can be created.
+
+<p align="center">
+<img src="./docs/images/unlocked-package-installation.png" alt="drawing" width="500"/>
+</p>
 
 ## Considerations
 

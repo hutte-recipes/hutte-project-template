@@ -26,4 +26,10 @@ Created with  ```sf project generate```, with
 - ESLint baseline configuration
 - Precommit Husky hook configured with prettier formating
 
+## Frameworks
+
+Hutte Apex Collection is a set of useful open source Apex frameworks for Salesforce development, built by contributors in the Salesforce community, [see more](./frameworks/README.md).
+
+------------------------
+
 Please check https://docs.hutte.io in order to learn more about setting up and using Hutte.
