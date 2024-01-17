@@ -6,7 +6,7 @@
     },
     {
       "path": "frameworks",
-      "package": "Hutte Frameworks Collection",
+      "package": "Hutte Apex Collection",
       "definitionFile": "config/project-scratch-def.json",
       "versionName": "ver 1.0",
       "versionNumber": "1.0.0.NEXT",
@@ -19,7 +19,7 @@
   "sfdcLoginUrl": "https://login.salesforce.com",
   "sourceApiVersion": "58.0",
   "packageAliases": {
-    "Hutte Frameworks Collection": "0HoS7000000004rKAA",
-    "Hutte Frameworks Collection@1.0.0-1": "04tS70000000IxpIAE"
+    "Hutte Apex Collection": "0HoS7000000004rKAA",
+    "Hutte Apex Collection@1.0.0-1": "04tS70000000IxpIAE"
   }
 }
