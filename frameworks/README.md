@@ -17,9 +17,14 @@ These are:
 
 While these can be deployed (or even installed as an unlocked package) independently, Hutte provides these bundled in an Unlocked Package to set a project baseline in a single-installation. Besides, this Hutte collection can be extended with new open source frameworks (either by Hutte or external contribution) and new versions of this unlocked package can be created.
 
-<p align="center">
+## Unlocked Package
+
+### Links
+
+- [Installation link for Production](https://login.salesforce.com/packaging/installPackage.apexp?p0=04tS70000000IxpIAE)
+- [Installation link for Sandbox](https://test.salesforce.com/packaging/installPackage.apexp?p0=04tS70000000IxpIAE)
+
 <img src="./docs/images/unlocked-package-installation.png" alt="drawing" width="500"/>
-</p>
 
 ## Considerations
 
