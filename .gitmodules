@@ -10,3 +10,6 @@
 [submodule "frameworks/apex-httpmock"]
 	path = frameworks/apex-httpmock
 	url = https://github.com/rsoesemann/apex-httpmock.git
+[submodule "frameworks/amoss"]
+	path = frameworks/amoss
+	url = https://github.com/bobalicious/amoss.git
