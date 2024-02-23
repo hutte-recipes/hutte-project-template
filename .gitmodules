@@ -13,3 +13,6 @@
 [submodule "frameworks/amoss"]
 	path = frameworks/amoss
 	url = https://github.com/bobalicious/amoss.git
+[submodule "frameworks/soql-lib"]
+	path = frameworks/soql-lib
+	url = https://github.com/beyond-the-cloud-dev/soql-lib.git
