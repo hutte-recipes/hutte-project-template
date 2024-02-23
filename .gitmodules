@@ -1,3 +1,6 @@
 [submodule "frameworks/apex-trigger-actions-framework"]
 	path = frameworks/apex-trigger-actions-framework
 	url = https://github.com/mitchspano/apex-trigger-actions-framework.git
+[submodule "frameworks/NebulaLogger"]
+	path = frameworks/NebulaLogger
+	url = https://github.com/jongpie/NebulaLogger.git
