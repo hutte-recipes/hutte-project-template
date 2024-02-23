@@ -4,3 +4,6 @@
 [submodule "frameworks/NebulaLogger"]
 	path = frameworks/NebulaLogger
 	url = https://github.com/jongpie/NebulaLogger.git
+[submodule "frameworks/apex-domainbuilder"]
+	path = frameworks/apex-domainbuilder
+	url = https://github.com/rsoesemann/apex-domainbuilder.git
