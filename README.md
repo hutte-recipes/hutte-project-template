@@ -28,7 +28,9 @@ Created with  ```sf project generate```, with
 
 ## Frameworks
 
-Hutte Apex Collection is a set of useful open source Apex frameworks for Salesforce development, built by contributors in the Salesforce community, [see more](./frameworks/README.md).
+Hutte Apex Collection is a set of useful open source Apex frameworks for Salesforce development, built by contributors in the Salesforce community, [see more](https://github.com/hutte-recipes/hutte-apex-frameworks-collection).
+
+Notice that these are packaged in an Unlocked package and only require installation, not deployment. A [git repository](https://github.com/hutte-recipes/hutte-apex-frameworks-collection) is provided to visualize its content. These are part of an independent repository and not in this repository in order to clean the template repository from unnecessary metadata, have a clean `.forceignore` and efficiently use git submodules (previous [discussion](https://github.com/hutte-recipes/hutte-project-template/pull/3)).
 
 ------------------------
 
