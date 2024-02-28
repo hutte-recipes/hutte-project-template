@@ -17,6 +17,7 @@ jobs:
           - name: SF Code Analyzer - PMD - Report findings as comments
             uses: mitchspano/sfdx-scan-pull-request@v0.1.16
             with:
+              report-mode: comments
               engine: pmd
               pmdconfig: config/pmd/ruleset.xml
               severity-threshold: 4
@@ -36,6 +37,7 @@ jobs:
             - name: SF Code Analyzer - RetireJS - Report findings as comments
               uses: mitchspano/sfdx-scan-pull-request@v0.1.16
               with:
+                report-mode: comments
                 engine: retire-js
                 severity-threshold: 4
               env:
@@ -56,6 +58,7 @@ jobs:
             - name: SF Code Analyzer - ESLint - Report findings as comments
               uses: mitchspano/sfdx-scan-pull-request@v0.1.16
               with:
+                report-mode: comments
                 engine: eslint
                 eslintconfig: .eslintrc.json
                 severity-threshold: 4
