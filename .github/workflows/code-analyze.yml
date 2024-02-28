@@ -15,7 +15,7 @@ jobs:
                 yarn global add @salesforce/cli
                 sf plugins:install @salesforce/sfdx-scanner
           - name: SF Code Analyzer - PMD - Report findings as comments
-            uses: mitchspano/sfdx-scan-pull-request@v[LATEST_VERSION_HERE]
+            uses: mitchspano/sfdx-scan-pull-request@v0.1.16
             with:
               engine: pmd
               pmdconfig: config/pmd/ruleset.xml
@@ -34,7 +34,7 @@ jobs:
                   yarn global add @salesforce/cli
                   sf plugins:install @salesforce/sfdx-scanner
             - name: SF Code Analyzer - RetireJS - Report findings as comments
-              uses: mitchspano/sfdx-scan-pull-request@v[LATEST_VERSION_HERE]
+              uses: mitchspano/sfdx-scan-pull-request@v0.1.16
               with:
                 engine: retire-js
                 severity-threshold: 4
@@ -54,7 +54,7 @@ jobs:
               run: |
                   yarn install
             - name: SF Code Analyzer - ESLint - Report findings as comments
-              uses: mitchspano/sfdx-scan-pull-request@v[LATEST_VERSION_HERE]
+              uses: mitchspano/sfdx-scan-pull-request@v0.1.16
               with:
                 engine: eslint
                 eslintconfig: .eslintrc.json
