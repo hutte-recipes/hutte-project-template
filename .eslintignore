@@ -14,3 +14,6 @@
 **/aura/**/*.xml
 **/aura/**/*.app
 .sfdx
+*.xml
+*.cls
+
