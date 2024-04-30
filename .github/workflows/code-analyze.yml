@@ -12,7 +12,7 @@ jobs:
           - uses: actions/setup-node@v3
           - name: Setup Salesforce CLI
             run: |
-                yarn global add @salesforce/cli
+                npm i --global @salesforce/cli
                 sf plugins:install @salesforce/sfdx-scanner
           - name: SF Code Analyzer - PMD - Report findings as comments
             uses: mitchspano/sfdx-scan-pull-request@v0.1.16
@@ -32,7 +32,7 @@ jobs:
             - uses: actions/setup-node@v3
             - name: Setup Salesforce CLI
               run: |
-                  yarn global add @salesforce/cli
+                  npm i --global @salesforce/cli
                   sf plugins:install @salesforce/sfdx-scanner
             - name: SF Code Analyzer - RetireJS - Report findings as comments
               uses: mitchspano/sfdx-scan-pull-request@v0.1.16
@@ -50,7 +50,7 @@ jobs:
             - uses: actions/setup-node@v3
             - name: Setup Salesforce CLI
               run: |
-                  yarn global add @salesforce/cli
+                  npm i --global @salesforce/cli
                   sf plugins:install @salesforce/sfdx-scanner
             - name: Install deps
               run: |
@@ -72,7 +72,7 @@ jobs:
             - uses: actions/setup-node@v3
             - name: Setup Salesforce CLI
               run: |
-                  yarn global add @salesforce/cli
+                  npm i --global @salesforce/cli
                   sf plugins:install @salesforce/sfdx-scanner
             - name: SF Code Analyzer - Data Flow Analysis
               run: |
