@@ -7,6 +7,7 @@
         "financialforce.lana",
         "mhutchie.git-graph",
         "eamodio.gitlens",
-        "DavidAnson.vscode-markdownlint"
+        "DavidAnson.vscode-markdownlint",
+        "victorgz.vscode-salesforce-colorg"
     ]
 }
