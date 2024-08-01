@@ -1,8 +1,9 @@
-version: 1.0
+version: "1.0"
 
 # Shell script to run when pushing the source code to the scratch orgs.
 # It's a great place to automate tasks like permission set assignments or data loading.
 push_script: |
+    set -euo pipefail # fail fast
     sf project deploy start --wait 60 --ignore-conflicts
     sf project deploy start --wait 15 --ignore-conflicts --source-dir post-deploy
 custom_scripts:
@@ -11,11 +12,13 @@ custom_scripts:
         'Import seed data':
             description: Import seed data into your Scratch Org
             run: |
+                set -euo pipefail # fail fast
                 echo y | sf plugins install sfdmu
                 sf sfdmu run -p config/data -s csvfile -u "${SALESFORCE_USERNAME}" --filelog 0 -n
     sandbox:
         'Import seed data':
             description: Import seed data into your Sandbox
             run: |
+                set -euo pipefail # fail fast
                 echo y | sf plugins install sfdmu
                 sf sfdmu run -p config/data -s csvfile -u "${SALESFORCE_USERNAME}" --filelog 0 -n
